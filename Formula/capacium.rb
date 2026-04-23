@@ -8,7 +8,7 @@ class Capacium < Formula
   depends_on "python@3.12"
 
   def install
-    system "python3", "-m", "pip", "install", *std_pip_install_args(buildpath: ".")
+    system "python3", "-m", "pip", "install", ".", *std_pip_install_args
   end
 
   test do
