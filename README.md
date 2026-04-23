@@ -5,14 +5,13 @@ Homebrew formula for [Capacium](https://github.com/Capacium/capacium) — Capabi
 ## Usage
 
 ```bash
-brew tap capacium/tap
+brew tap capacium/capacium
 brew install capacium
-```
 
 Or directly:
 
 ```bash
-brew install capacium/tap/capacium
+brew install capacium/capacium
 ```
 
 ## What is Capacium?
