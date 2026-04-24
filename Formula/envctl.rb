@@ -6,8 +6,6 @@ class Envctl < Formula
   license "Apache-2.0"
   head "https://github.com/Capacium/envctl.git", branch: "main"
 
-  bottle :unneeded
-
   def install
     bin.install "bin/envctl"
   end
