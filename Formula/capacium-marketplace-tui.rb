@@ -7,11 +7,6 @@ class CapaciumMarketplaceTui < Formula
 
   depends_on "node"
 
-  resource "ncc" do
-    url "https://registry.npmjs.org/@vercel/ncc/-/ncc-0.38.3.tgz"
-    sha256 "69f7d226fea94a5afb8b0e1677c8e583a6360ed0a3becc5fb26a970748a2a11c"
-  end
-
   def install
     system "npm", "install", *std_npm_args
     system "npx", "--yes", "ncc", "build", "src/index.js", "-o", "dist/ncc"
