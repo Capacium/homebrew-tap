@@ -8,8 +8,8 @@ class CapaciumMarketplaceTui < Formula
   depends_on "node"
 
   def install
-    system "npm", "install", *std_npm_args
-    system "npm", "exec", "--", "ncc", "build", "src/index.js", "-o", "dist/ncc"
+    system "npm", "install", "--include=dev", *std_npm_args
+    system "./node_modules/.bin/ncc", "build", "src/index.js", "-o", "dist/ncc"
     libexec.install Dir["dist/ncc/*"]
     (bin/"capacium-marketplace-tui").write <<~SHELL
       #!/bin/bash
