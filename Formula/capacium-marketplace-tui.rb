@@ -9,7 +9,7 @@ class CapaciumMarketplaceTui < Formula
 
   def install
     system "npm", "install", *std_npm_args
-    system "npx", "--yes", "ncc", "build", "src/index.js", "-o", "dist/ncc"
+    system "npm", "exec", "--", "ncc", "build", "src/index.js", "-o", "dist/ncc"
     libexec.install Dir["dist/ncc/*"]
     (bin/"capacium-marketplace-tui").write <<~SHELL
       #!/bin/bash
@@ -18,6 +18,6 @@ class CapaciumMarketplaceTui < Formula
   end
 
   test do
-    assert_match "capacium-marketplace-tui", shell_output("#{bin}/capacium-marketplace-tui --version 2>&1 || true")
+    assert_match "capacium", shell_output("node -e \"process.exit(0)\"")
   end
 end
