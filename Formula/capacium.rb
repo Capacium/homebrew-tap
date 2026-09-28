@@ -4,7 +4,7 @@ class Capacium < Formula
   desc "Capability Packaging System — package, distribute, and manage AI agent capabilities"
   homepage "https://github.com/Capacium/capacium"
   url "https://github.com/Capacium/capacium/archive/refs/tags/v1.1.6.tar.gz"
-  sha256 "6f3d2143bed904ffe5c1c426028bd9705e30c63ee0f5fcd34880767204201e39"
+  sha256 "434551bbc81127d47c4bd0c16033bee4de80c105417ec5fbb457541f6e035a7e"
   license "Apache-2.0"
 
   depends_on "python@3.12"
